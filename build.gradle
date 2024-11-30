@@ -1,0 +1,42 @@
+plugins {
+    id 'org.springframework.boot' version '3.1.0' // Adjust version as needed
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+    id 'io.swagger.core.v3.swagger-gradle-plugin' version '2.2.0' apply(true)
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17' // Ensure your Java version matches this
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot Starter for Web Applications
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Boot Starter for JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+//    // H2 Database (In-Memory DB for simplicity)
+//    runtimeOnly 'com.h2database:h2'
+
+    implementation 'com.opencsv:opencsv:5.7.1'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // Jakarta Persistence (JPA)
+    implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+
+    // Validation (Optional but useful for DTO validation)
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // Testing dependencies
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
