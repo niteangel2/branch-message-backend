@@ -2,6 +2,8 @@
 
 This is the backend for the Messaging App. It is built using **Spring Boot** and **Gradle**, and it provides REST APIs for managing messages, including sending and responding to messages. This backend can be connected to a database (MySQL) to store and retrieve messages.
 
+Frontend Github link: https://github.com/niteangel2/messaging-app-frontend
+
 ## Prerequisites
 
 1. **Java Development Kit (JDK)**:
